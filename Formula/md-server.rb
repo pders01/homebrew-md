@@ -1,8 +1,8 @@
 class MdServer < Formula
   desc "A simple CLI tool that serves markdown files as HTML with beautiful Tailwind CSS styling"
   homepage "https://github.com/pders01/md"
-  url "https://registry.npmjs.org/@jpahd/md-server/-/@jpahd/md-server-1.0.0.tgz"
-  sha256 "64b3b93329f02f2729bd7228e1e3317d68747f4b31125eb88e161136a0df0719"
+  url "https://registry.npmjs.org/@jpahd/md-server/-/md-server-1.0.0.tgz"
+  sha256 "26517d43871c6c089d92abb00f5f1bad1040fa96"
   license "MIT"
 
   depends_on "node"
