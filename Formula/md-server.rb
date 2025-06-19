@@ -9,7 +9,24 @@ class MdServer < Formula
 
   def install
     system "npm", "install", "@jpahd/md-server"
-    bin.install_symlink "node_modules/@jpahd/md-server/cli.js" => "md-server"
+    
+    # Find the CLI file in the installed package
+    cli_path = "node_modules/@jpahd/md-server/cli.js"
+    
+    # Make sure the CLI file exists and is executable
+    if File.exist?(cli_path)
+      File.chmod(0755, cli_path)
+      bin.install cli_path => "md-server"
+    else
+      # Fallback: try to find the binary in the package
+      Dir.glob("node_modules/@jpahd/md-server/*.js").each do |file|
+        if File.basename(file) == "cli.js" || File.basename(file) == "md-server.js"
+          File.chmod(0755, file)
+          bin.install file => "md-server"
+          break
+        end
+      end
+    end
   end
 
   test do
