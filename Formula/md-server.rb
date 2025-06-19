@@ -8,10 +8,8 @@ class MdServer < Formula
   depends_on "node"
 
   def install
-    # Install pnpm if not available
-    unless system("which", "pnpm", out: File::NULL)
-      system "npm", "install", "-g", "pnpm"
-    end
+    # Install pnpm globally
+    system "npm", "install", "-g", "pnpm"
     
     # Install dependencies and build
     system "pnpm", "install"
