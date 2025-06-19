@@ -8,19 +8,12 @@ class MdServer < Formula
   depends_on "node"
 
   def install
-    # Install pnpm globally
-    system "npm", "install", "-g", "pnpm"
-    
-    # Install dependencies and build
-    system "pnpm", "install"
-    system "pnpm", "run", "build"
-    
-    # Install the CLI binary
+    system "npm", "install"
+    system "npm", "run", "build"
     bin.install "dist/md-server.js" => "md-server"
   end
 
   test do
-    # Test that the CLI can be run
     system "#{bin}/md-server", "--help"
   end
 end 
