@@ -1,15 +1,15 @@
 class MdServer < Formula
   desc "A simple CLI tool that serves markdown files as HTML with beautiful Tailwind CSS styling"
   homepage "https://github.com/pders01/md"
-  version "1.0.0"
+  url "https://registry.npmjs.org/@jpahd/md-server/-/@jpahd/md-server-1.0.0.tgz"
+  sha256 "64b3b93329f02f2729bd7228e1e3317d68747f4b31125eb88e161136a0df0719"
   license "MIT"
 
   depends_on "node"
 
   def install
-    system "npm", "install", "-g", "@jpahd/md-server"
-    # Symlink the installed binary into Homebrew's bin
-    bin.install_symlink Dir[HOMEBREW_PREFIX/"lib/node_modules/@jpahd/md-server/cli.js"] => "md-server"
+    system "npm", "install", *Language::Node.std_npm_install_args(libexec)
+    bin.install_symlink libexec/"bin/md-server"
   end
 
   test do
