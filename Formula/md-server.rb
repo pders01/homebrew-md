@@ -9,7 +9,7 @@ class MdServer < Formula
   # existing user's `brew upgrade` doesn't break, but Homebrew prints the
   # deprecation warning at install/upgrade time and the binary itself prints
   # the migration banner on every run.
-  deprecate! date: "2026-04-25",
+  deprecate! date:    "2026-04-25",
              because: "merged into mdv; install with `brew install pders01/md/mdv`"
 
   depends_on "node"
@@ -37,4 +37,4 @@ class MdServer < Formula
   test do
     system "#{bin}/md-server", "--help"
   end
-end 
+end

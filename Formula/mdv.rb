@@ -7,18 +7,18 @@ class Mdv < Formula
   on_macos do
     on_arm do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-darwin-arm64.tar.gz"
-      sha256 "REPLACE_WITH_DARWIN_ARM64_SHA256"
+      sha256 "e09a21d146543559e2f78540117e63aeb01cdb7ea6ef9c01e41fd4e59a345ad1"
     end
     on_intel do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-darwin-x64.tar.gz"
-      sha256 "REPLACE_WITH_DARWIN_X64_SHA256"
+      sha256 "e538444ae0fec155414dee129051beb059b065518b1f2bb33b3db147d8548daf"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-linux-x64.tar.gz"
-      sha256 "REPLACE_WITH_LINUX_X64_SHA256"
+      sha256 "e02471c8198c4eadaf669c8af416bd76707fcba2f15b35b3356d2d937fee0e1f"
     end
   end
 
