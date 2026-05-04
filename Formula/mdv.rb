@@ -1,24 +1,24 @@
 class Mdv < Formula
   desc "Terminal markdown viewer with vim keybindings, plus `mdv serve` HTTP mode"
   homepage "https://github.com/pders01/mdv"
-  version "0.17.0"
+  version "0.26.6"
   license "MIT"
 
   on_macos do
     on_arm do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-darwin-arm64.tar.gz"
-      sha256 "e09a21d146543559e2f78540117e63aeb01cdb7ea6ef9c01e41fd4e59a345ad1"
+      sha256 "c639c823af1a7e6b263a08d0a21b83d4ec782fbae24ac8958043fcac48eab1c3"
     end
     on_intel do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-darwin-x64.tar.gz"
-      sha256 "e538444ae0fec155414dee129051beb059b065518b1f2bb33b3db147d8548daf"
+      sha256 "386ac7c82f2f8b6c5f06eb7399106ae65ebe48b5b4c320136793ef3dfff46155"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/pders01/mdv/releases/download/v#{version}/mdv-linux-x64.tar.gz"
-      sha256 "e02471c8198c4eadaf669c8af416bd76707fcba2f15b35b3356d2d937fee0e1f"
+      sha256 "31d2c82b520f1c7ba31521a1cd24e80f731be52029fa7c3811b5c30be34fd7a7"
     end
   end
 
